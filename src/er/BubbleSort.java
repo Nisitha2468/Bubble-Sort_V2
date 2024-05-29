@@ -13,11 +13,16 @@ public class BubbleSort {
 		array[3] = 45;
 		
 		for(int i=1; i<(array.length); i++) {
+			
+			boolean swapped = false;
+			
 			for(int j = 1; j<=(array.length - i); j++) {
 				if(array[j-1]> array[j]) {
 					int x = array[j];
 					array[j] = array[j-1];
 					array[j-1] = x;
+					
+					swapped = true;
 				}
 			}
 		}
